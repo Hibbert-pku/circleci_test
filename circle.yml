@@ -11,7 +11,11 @@ dependencies:
     - sudo dpkg -i cuda-repo-ubuntu1204-7-0-local_7.0-28_amd64.deb
     - sudo apt-get update
     - sudo apt-get install cuda
+  override:
+    - sudo apt-get install g++-4.9
   post:
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 99
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 99
     - g++ --version
     - nvcc --version
     - ls /usr/local/cuda/lib64
