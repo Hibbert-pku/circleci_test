@@ -20,6 +20,4 @@ dependencies:
 
 test:
   override:
-    - tup generate build.sh
-    - ./build.sh
-    - ./tests/run_all_tests
+    - make
