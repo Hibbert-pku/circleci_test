@@ -8,9 +8,8 @@ dependencies:
   pre:
     - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
     - wget http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1204-7-0-local_7.0-28_amd64.deb
-    - sudo dpkg -i cuda-repo-ubuntu1204_7.0-28_amd64.deb
+    - sudo dpkg -i cuda-repo-ubuntu1204-7-0-local_7.0-28_amd64.deb
     - sudo apt-get update
-    - sudo apt-get install cuda
   post:
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 99
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 99
