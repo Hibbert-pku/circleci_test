@@ -11,6 +11,10 @@ dependencies:
     - sudo dpkg -i cuda-repo-ubuntu1204_7.0-28_amd64.deb
     - sudo apt-get update
     - sudo apt-get install cuda
+    - git clone https://github.com/google/protobuf.git
+    - cd protobuf && ./autogen.sh && ./configure && make && make check && sudo make install
+    - git clone https://github.com/grpc/grpc.git
+    - cd grpc && git submodule update --init && make && sudo make install
   override:
     - sudo apt-get install g++-4.9
   post:
